@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name": "Facebook Auto Inviter",
+    "version": "1.0",
+    "description": "Automaticky pozve lidi, kteří olajkovali váš příspěvek na Facebook",
+    "permissions": ["activeTab", "scripting"],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": "facebook.png"
+    },
+    "icons": {
+      "48": "facebook.png",
+      "128": "facebook.png"
+    },
+    "content_scripts": [
+      {
+        "matches": ["*://*.facebook.com/*"],
+        "js": ["content.js"]
+      }
+    ]
+  }

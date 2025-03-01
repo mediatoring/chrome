@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "PlaCla Nabízeč",
+  "version": "1.0",
+  "icons": {
+    "16": "ico.png",
+    "48": "ico.png",
+    "128": "ico.png"
+  },
+  "permissions": ["scripting", "tabs", "webNavigation"],
+  "host_permissions": ["https://sluzba.placla.cz/bloger/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_icon": "ico.png",
+    "default_popup": "popup.html",
+    "default_title": "Spustit a nabídnout se na vše"
+  }
+}
