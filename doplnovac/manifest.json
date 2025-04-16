@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Mediatoring Inserter",
+  "version": "1.0",
+  "description": "Vkládání údajů do aktivního pole.",
+  "action": {
+    "default_title": "Mediatoring Inserter",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [
+    "scripting",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ]
+}
