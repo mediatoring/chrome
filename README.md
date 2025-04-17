@@ -19,8 +19,8 @@ Automatizace rozesílání pozvánek na Facebook události. Umožňuje nastavit 
 
 📂 [Složka s pluginem](facebook_invite/)
 
-### 4. Placla Offers
-Nástroj pro sledování a správu nabídek na platformě Placla. Pomáhá s automatizací procesů souvisejících s nabídkami a jejich správou.
+### 4. [Placla](http://placla.eu) Offers
+Nástroj pro sledování a správu nabídek na platformě [Placla](http://placla.eu). Pomáhá s automatizací procesů souvisejících s nabídkami a jejich správou.
 
 📂 [Složka s pluginem](placla_offers/)
 
@@ -41,8 +41,8 @@ Automation tool for sending Facebook event invitations. Allows setting delays be
 
 📂 [Plugin folder](facebook_invite/)
 
-### 4. Placla Offers
-Tool for tracking and managing offers on the Placla platform. Helps with automating offer-related processes and their management.
+### 4. [Placla](http://placla.eu) Offers
+Tool for tracking and managing offers on the [Placla](http://placla.eu) platform. Helps with automating offer-related processes and their management.
 
 📂 [Plugin folder](placla_offers/)
 
