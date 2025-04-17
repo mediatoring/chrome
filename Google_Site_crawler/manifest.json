@@ -1,0 +1,29 @@
+{
+    "manifest_version": 3,
+    "name": "Google Sites Crawler",
+    "description": "Nástroj pro iterativní procházení Google Sites",
+    "version": "1.0",
+    "permissions": [
+      "tabs",
+      "scripting",
+      "activeTab",
+      "storage",
+      "downloads"
+    ],
+    "host_permissions": [
+      "https://sites.google.com/*",
+      "https://accounts.google.com/*"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://sites.google.com/*"],
+        "js": ["content.js"]
+      }
+    ],
+    "action": {
+      "default_popup": "popup.html"
+    }
+  }
