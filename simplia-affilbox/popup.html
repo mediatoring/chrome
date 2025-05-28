@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        body {
+            width: 320px;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            font-size: 18px;
+            color: #333;
+            margin: 0 0 5px 0;
+        }
+        .header p {
+            font-size: 12px;
+            color: #666;
+            margin: 0;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 12px;
+            font-weight: bold;
+            color: #333;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+        .date-range {
+            display: flex;
+            gap: 10px;
+        }
+        .date-range .form-group {
+            flex: 1;
+            margin-bottom: 0;
+        }
+        .button {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            width: 100%;
+            margin-bottom: 10px;
+            transition: background 0.3s;
+        }
+        .button:hover {
+            background: #218838;
+        }
+        .button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+        .button-secondary {
+            background: #6c757d;
+            margin-bottom: 15px;
+        }
+        .button-secondary:hover {
+            background: #545b62;
+        }
+        .info {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            padding: 15px;
+            margin-top: 15px;
+            font-size: 12px;
+            line-height: 1.4;
+        }
+        .info h3 {
+            margin: 0 0 10px 0;
+            font-size: 13px;
+            color: #495057;
+        }
+        .info ul {
+            margin: 5px 0;
+            padding-left: 20px;
+        }
+        .info li {
+            margin-bottom: 3px;
+        }
+        .status {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 12px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Affilbox Auto Provisor</h1>
+        <p>Automaticke zpracovani provizi</p>
+    </div>
+    
+    <div class="form-group">
+        <label>Datovy rozsah:</label>
+        <div class="date-range">
+            <div class="form-group">
+                <label>Od:</label>
+                <input type="date" id="dateFrom" />
+            </div>
+            <div class="form-group">
+                <label>Do:</label>
+                <input type="date" id="dateTo" />
+            </div>
+        </div>
+    </div>
+    
+    <button id="setLastMonth" class="button button-secondary">
+        Nastavit minuly mesic
+    </button>
+    
+    <button id="processBtn" class="button">
+        Spustit zpracovani
+    </button>
+    
+    <div class="info">
+        <h3>Co rozsireni dela:</h3>
+        <ul>
+            <li><strong>Vyexpedovane</strong> objednavky → <span style="color: #28a745;">potvrdi provizi</span></li>
+            <li><strong>Stornovane</strong> objednavky → <span style="color: #dc3545;">zamitne provizi</span></li>
+        </ul>
+        <p><strong>Zpracovava pouze cekajici konverze v zadanem datovem rozsahu!</strong></p>
+    </div>
+    
+    <div class="status" id="status">
+        Pripraveno ke spusteni
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>

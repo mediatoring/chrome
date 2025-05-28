@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Affilbox Auto Provisor",
+  "version": "1.0",
+  "description": "Automaticky potvrzuje provize pro vyexpedovane objednavky a zamita stornovane",
+  "permissions": [
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://*/admin/affilbox-objednavky*"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Affilbox Auto Provisor"
+  }
+}
