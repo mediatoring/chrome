@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        body {
+            width: 300px;
+            padding: 10px;
+            font-family: Arial, sans-serif;
+        }
+        .section {
+            margin-bottom: 15px;
+        }
+        textarea {
+            width: 100%;
+            height: 100px;
+            margin: 5px 0;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            resize: vertical;
+        }
+        button {
+            padding: 8px 15px;
+            margin: 5px 5px 5px 0;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .start-btn {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .stop-btn {
+            background-color: #f44336;
+            color: white;
+        }
+        .status {
+            padding: 5px;
+            margin: 5px 0;
+            border-radius: 3px;
+            font-size: 12px;
+        }
+        .status.success {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .status.error {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+    </style>
+</head>
+<body>
+    <div class="section">
+        <h3>Otázky a odpovědi</h3>
+        <textarea id="questionsData" placeholder="Každý řádek: Otázka|Odpověď
+Příklad:
+Jak se jmenuješ?|Jsem AI asistent
+Co umíš?|Pomáhám s různými úkoly"></textarea>
+    </div>
+    
+    <div class="section">
+        <button id="startBtn" class="start-btn">Spustit</button>
+        <button id="stopBtn" class="stop-btn">Zastavit</button>
+    </div>
+    
+    <div id="status" class="status" style="display: none;"></div>
+    
+    <script src="popup.js"></script>
+</body>
+</html>

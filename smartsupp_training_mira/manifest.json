@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Smartsupp Training Auto Filler",
+  "version": "1.0",
+  "description": "Automaticky vyplňuje formuláře otázek a odpovědí pro Smartsupp training",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "scripting"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Smartsupp Training Auto Filler"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "host_permissions": [
+    "*://*/*"
+  ]
+}
